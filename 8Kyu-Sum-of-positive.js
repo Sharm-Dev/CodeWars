@@ -5,8 +5,8 @@
 // Note: if there is nothing to sum, the sum is default to 0.
 
 function positiveSum(arr) {
-    const x = arr.filter(positiveNum => positiveNum >= 0).reduce((previousValue, currentValue) => previousValue + currentValue, 0);
-    console.log(x)
+    const people = arr.filter(positiveNum => positiveNum >= 0).reduce((previousValue, currentValue) => previousValue + currentValue, 0);
+    console.log(people)
 
 }
 

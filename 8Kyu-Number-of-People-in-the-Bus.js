@@ -10,41 +10,107 @@
 
 // The second value in the first integer array is 0, since the bus is empty in the first bus stop.
 
+
+//used a for loop 
 var number = function (busStops) {
   // Good Luck!
-busStops.filter(e => {
-    // console.log(e)
-    if(e[0] && e[1]){
-        console.log(e + e);
+  let onTheBus = 0;
+  let offTheBus = 0;
+    for(let i = 0; i < busStops.length; i++){
+      onTheBus += busStops[i][0];
+      offTheBus += busStops[i][1];
     }
-})
+    return onTheBus - offTheBus
+}
 
-} 
+
+//using reduce
+
+// function number (busStops) {
+//   const headCounts =
+//   busStops.reduce((accumulator, current, i) => {
+//       accumulator[0] += current[0] 
+//       accumulator[1] += current[1]
+//       accumulator[1] += current[2]
+//       accumulator[1] += current[3]
+        
+//       console.log(
+//         "index", i, "\n",
+//         "accumulator", accumulator, "\n",
+//         "onTheBus", current[0], "\n",
+//         "offTheBus", current[1], "\n",
+//         "current", current, "\n",
+//         "onTheBusTotal", accumulator[0], "\n",
+//         "offTheBusTotal", accumulator[1], "\n",
+//       )
+
+//       return accumulator
+//     }, [0, 0])
+//     console.log(headCounts)
+//     console.log(headCounts[0] - headCounts[1])
+// } 
+
+
+
+
+//using reduce and map
+
+// function number (busStops) {
+//   const headCounts =
+//   busStops.reduce((accumulator, current, i) =>     
+//       accumulator
+//         .map((headCountTotal, i) => 
+//           headCountTotal += current[i]
+//         )
+//     , [0, 0])
+
+//     console.log(headCounts[0] - headCounts[1])
+// } 
+
+//spread operated / merge two objects 
+
+// const person = {
+//   name: "joe"
+// }
+
+// const info = {
+//   job: "technician"
+// }
+
+// const merged = {...person, ...info}
+
+// console.log("merged", merged)
+
+
+
+
 
 
 
 
 
 number([
-    [10, 0],
-    [3, 5],
-    [5, 8],
+    [10, 0, 8],
+    [3, 5, 3],
+    [5, 8, 2],
   ]);
 
-  number([
-    [3, 0],
-    [9, 1],
-    [4, 10],
-    [12, 2],
-    [6, 1],
-    [7, 10],
-  ]);
+  // [2,3,4,5,7]
 
-number([
-    [3, 0],
-    [9, 1],
-    [4, 8],
-    [12, 2],
-    [6, 1],
-    [7, 8],
-  ]);
+//   number([
+//     [3, 0],
+//     [9, 1],
+//     [4, 10],
+//     [12, 2],
+//     [6, 1],
+//     [7, 10],
+//   ]);
+
+// number([
+//     [3, 0],
+//     [9, 1],
+//     [4, 8],
+//     [12, 2],
+//     [6, 1],
+//     [7, 8],
+//   ]);
